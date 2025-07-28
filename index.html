@@ -9,10 +9,32 @@
   <button onclick="generate()">Generate Strategy Slogan</button>
 
   <script>
-    const verbs = ["Transforming", "Reimagining", "Embedding", "Accelerating", "Catalysing"];
-    const buzzNouns = ["place-based synergies", "digital ecosystems", "community wealth models", "citizen-centred pathways", "inclusive growth vectors", "agile operating models"];
-    const outcomes = ["better futures", "resilient communities", "thriving localities", "empowered systems", "strategic alignment"];
-    const approaches = ["through whole-system redesign", "via iterative co-production", "enabled by behavioural insight", "with pan-organisational agility", "through digital-first enablers"];
+const verbs = [
+  "Transforming", "Reimagining", "Embedding", "Accelerating", "Catalysing", "Enabling", "Leveraging",
+  "Facilitating", "Mainstreaming", "Harnessing", "Reshaping", "Orchestrating", "Incubating", "Optimising"
+];
+
+const buzzNouns = [
+  "place-based synergies", "digital ecosystems", "community wealth models", "citizen-centred pathways",
+  "cross-sector partnerships", "adaptive operating models", "hyperlocal interventions", "resilient infrastructures",
+  "strategic capabilities", "regenerative frameworks", "behavioural insight matrices", "collaborative service hubs",
+  "inter-agency workflows", "networked delivery platforms", "inclusive leadership paradigms", "joined-up governance"
+];
+
+const outcomes = [
+  "better futures", "resilient communities", "thriving localities", "empowered systems", "strategic alignment",
+  "lived-experience value", "sustainable innovation", "economic vibrancy", "coherent service landscapes",
+  "future-readiness", "net-zero outcomes", "pan-organisational impact", "equitable transformation",
+  "stakeholder confidence", "public trust renewal", "meaningful change"
+];
+
+const approaches = [
+  "through whole-system redesign", "via iterative co-production", "enabled by behavioural insight",
+  "with pan-organisational agility", "through digital-first enablers", "by embedding agile governance",
+  "via networked intelligence", "with data-led curiosity", "through co-designed complexity handling",
+  "by activating latent community assets", "enabled by ecosystem alignment", "with continuous feedback loops",
+  "via adaptive programme logic", "by reframing success metrics", "with radical listening practices"
+];
 
     function generate() {
       const verb = verbs[Math.floor(Math.random() * verbs.length)];
