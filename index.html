@@ -1,48 +1,110 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Buzzword-o-matic</title>
+  <meta charset="UTF-8">
+  <title>Council Transformation Buzzword-o-matic</title>
+  <style>
+    body {
+      font-family: system-ui, sans-serif;
+      background: #f4f4f4;
+      color: #222;
+      max-width: 700px;
+      margin: 3em auto;
+      padding: 1em 2em;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      background-color: white;
+      border-radius: 6px;
+    }
+    h1 {
+      font-size: 1.8em;
+      margin-bottom: 0.2em;
+    }
+    h1 span {
+      font-weight: normal;
+      font-size: 0.6em;
+      color: #777;
+    }
+    button {
+      padding: 0.6em 1.2em;
+      font-size: 1em;
+      background: #00449e;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      margin-top: 1em;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #00337a;
+    }
+    #slogan {
+      font-size: 1.3em;
+      margin-top: 1.5em;
+      font-style: italic;
+      line-height: 1.5em;
+    }
+    footer {
+      margin-top: 3em;
+      font-size: 0.8em;
+      color: #777;
+      border-top: 1px solid #ddd;
+      padding-top: 1em;
+    }
+  </style>
 </head>
 <body>
-  <h1>Council Transformation Buzzword-o-matic</h1>
-  <p id="slogan"></p>
+  <h1>Buzzword-o-matic <span>for Local Government Transformation</span></h1>
+  <p>Click the button to generate your strategy slogan:</p>
   <button onclick="generate()">Generate Strategy Slogan</button>
+  <p id="slogan"> </p>
+
+  <footer>
+    © 2025 | Powered by joined-up thinking and surplus acronyms.
+  </footer>
 
   <script>
-const verbs = [
-  "Transforming", "Reimagining", "Embedding", "Accelerating", "Catalysing", "Enabling", "Leveraging",
-  "Facilitating", "Mainstreaming", "Harnessing", "Reshaping", "Orchestrating", "Incubating", "Optimising"
-];
+    const verbs = [
+      "Transforming", "Reimagining", "Embedding", "Accelerating", "Catalysing", "Enabling", "Leveraging",
+      "Facilitating", "Mainstreaming", "Harnessing", "Reshaping", "Orchestrating", "Incubating", "Optimising"
+    ];
 
-const buzzNouns = [
-  "place-based synergies", "digital ecosystems", "community wealth models", "citizen-centred pathways",
-  "cross-sector partnerships", "adaptive operating models", "hyperlocal interventions", "resilient infrastructures",
-  "strategic capabilities", "regenerative frameworks", "behavioural insight matrices", "collaborative service hubs",
-  "inter-agency workflows", "networked delivery platforms", "inclusive leadership paradigms", "joined-up governance"
-];
+    const buzzNouns = [
+      "place-based synergies", "digital ecosystems", "community wealth models", "citizen-centred pathways",
+      "cross-sector partnerships", "adaptive operating models", "hyperlocal interventions", "resilient infrastructures",
+      "strategic capabilities", "regenerative frameworks", "behavioural insight matrices", "collaborative service hubs",
+      "inter-agency workflows", "networked delivery platforms", "inclusive leadership paradigms", "joined-up governance"
+    ];
 
-const outcomes = [
-  "better futures", "resilient communities", "thriving localities", "empowered systems", "strategic alignment",
-  "lived-experience value", "sustainable innovation", "economic vibrancy", "coherent service landscapes",
-  "future-readiness", "net-zero outcomes", "pan-organisational impact", "equitable transformation",
-  "stakeholder confidence", "public trust renewal", "meaningful change"
-];
+    const outcomes = [
+      "better futures", "resilient communities", "thriving localities", "empowered systems", "strategic alignment",
+      "lived-experience value", "sustainable innovation", "economic vibrancy", "coherent service landscapes",
+      "future-readiness", "net-zero outcomes", "pan-organisational impact", "equitable transformation",
+      "stakeholder confidence", "public trust renewal", "meaningful change"
+    ];
 
-const approaches = [
-  "through whole-system redesign", "via iterative co-production", "enabled by behavioural insight",
-  "with pan-organisational agility", "through digital-first enablers", "by embedding agile governance",
-  "via networked intelligence", "with data-led curiosity", "through co-designed complexity handling",
-  "by activating latent community assets", "enabled by ecosystem alignment", "with continuous feedback loops",
-  "via adaptive programme logic", "by reframing success metrics", "with radical listening practices"
-];
+    const approaches = [
+      "through whole-system redesign", "via iterative co-production", "enabled by behavioural insight",
+      "with pan-organisational agility", "through digital-first enablers", "by embedding agile governance",
+      "via networked intelligence", "with data-led curiosity", "through co-designed complexity handling",
+      "by activating latent community assets", "enabled by ecosystem alignment", "with continuous feedback loops",
+      "via adaptive programme logic", "by reframing success metrics", "with radical listening practices"
+    ];
+
+    const suffixes = [
+      "at scale", "for 2030 readiness", "across all siloes", "within current resourcing envelopes",
+      "with measurable KPIs", "in line with statutory obligations", "without alienating stakeholders",
+      "under constant review", "until further notice"
+    ];
 
     function generate() {
       const verb = verbs[Math.floor(Math.random() * verbs.length)];
-      const buzzNoun = buzzNouns[Math.floor(Math.random() * buzzNouns.length)];
+      const noun = buzzNouns[Math.floor(Math.random() * buzzNouns.length)];
       const outcome = outcomes[Math.floor(Math.random() * outcomes.length)];
       const approach = approaches[Math.floor(Math.random() * approaches.length)];
+      const suffix = suffixes[Math.floor(Math.random() * suffixes.length)];
 
-      document.getElementById("slogan").innerText = `${verb} ${buzzNoun} for ${outcome} ${approach}.`;
+      const sentence = `${verb} ${noun} for ${outcome} ${approach} ${suffix}.`;
+      document.getElementById("slogan").innerText = sentence;
     }
   </script>
 </body>
