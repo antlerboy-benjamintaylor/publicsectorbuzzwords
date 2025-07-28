@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Buzzword-o-matic</title>
+</head>
+<body>
+  <h1>Council Transformation Buzzword-o-matic</h1>
+  <p id="slogan"></p>
+  <button onclick="generate()">Generate Strategy Slogan</button>
+
+  <script>
+    const verbs = ["Transforming", "Reimagining", "Embedding", "Accelerating", "Catalysing"];
+    const buzzNouns = ["place-based synergies", "digital ecosystems", "community wealth models", "citizen-centred pathways", "inclusive growth vectors", "agile operating models"];
+    const outcomes = ["better futures", "resilient communities", "thriving localities", "empowered systems", "strategic alignment"];
+    const approaches = ["through whole-system redesign", "via iterative co-production", "enabled by behavioural insight", "with pan-organisational agility", "through digital-first enablers"];
+
+    function generate() {
+      const verb = verbs[Math.floor(Math.random() * verbs.length)];
+      const buzzNoun = buzzNouns[Math.floor(Math.random() * buzzNouns.length)];
+      const outcome = outcomes[Math.floor(Math.random() * outcomes.length)];
+      const approach = approaches[Math.floor(Math.random() * approaches.length)];
+
+      document.getElementById("slogan").innerText = `${verb} ${buzzNoun} for ${outcome} ${approach}.`;
+    }
+  </script>
+</body>
+</html>
